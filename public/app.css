@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+article{
+
+    margin-top: 5px;
+}
+
+article h1{
+    font-size: 40px;
+    color: red;
+}
+
+article+article{
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top:2px solid #c3c3c3;
+}
+
+article:first-child{
+    margin-top: 20px;
+}
