@@ -8,16 +8,16 @@
     <title>Blog</title>
 </head>
 <body>
-    <?php if(!empty($posts)){
-        foreach($posts as $post): ?>
+     @if(!empty($posts))
+        @foreach($posts as $post)
             <article>
-                 <h1><a href="post/<?= $post->slug ?>"><?= $post->title ?></a></h1>
 
-                 <p><?= $post->excerpt ?></p>
+                 <h1><a href="post/{{ $post->slug }}">{{ $post->title }}</a></h1>
 
+                 <p>{{ $post->excerpt }}</p>
 
             </article>
-        <?php endforeach;
-    } ?>
+        @endforeach
+    @endif
 </body>
 </html>

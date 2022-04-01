@@ -24,7 +24,7 @@ class Post
 
 
     public static function all(){
-        return cache()->remember("posts.all", now()->addMinute(), function(){
+        return cache()->remember("posts.all", now()->addSecond(), function(){
             return collect(File::allFiles(resource_path("posts/")))
                 ->map(function($file){
                     $document= YamlFrontMatter::parseFile($file);

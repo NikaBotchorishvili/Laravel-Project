@@ -9,8 +9,11 @@
 </head>
 <body>
     <article>
-        <?= $post->body ?>
+
+        {!! $post->body !!}
+
     </article>
+
     <a href="/">Go back</a>
 </body>
 </html>
