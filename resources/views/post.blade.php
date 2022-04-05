@@ -1,10 +1,10 @@
-@extends("layout")
+<x-layout>
+    <x-slot name="content">
+        <article>
 
-@section("content")
-<article>
+            {!! $post->body !!}
 
-    {!! $post->body !!}
-
-</article>
-@endsection
-<a href="/">Go back</a>
+        </article>
+        <a href="/">Go back</a>
+    </x-slot>
+</x-layout>

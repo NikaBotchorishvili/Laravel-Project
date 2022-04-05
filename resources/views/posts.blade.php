@@ -1,15 +1,16 @@
-@extends("layout")
+<x-layout>
+    <x-slot name="content">
+        @if(!empty($posts))
+            @foreach($posts as $post)
+                <article>
 
-@section("content")
-     @if(!empty($posts))
-        @foreach($posts as $post)
-            <article>
+                    <h1><a href="post/{{ $post->slug }}">{{ $post->title }}</a></h1>
 
-                 <h1><a href="post/{{ $post->slug }}">{{ $post->title }}</a></h1>
+                    <p> {{ $post->excerpt }}</p>
 
-                 <p>{{ $post->excerpt }}</p>
+                </article>
+            @endforeach
+        @endif
 
-            </article>
-        @endforeach
-    @endif
-@endsection
+    </x-slot>
+</x-layout>
